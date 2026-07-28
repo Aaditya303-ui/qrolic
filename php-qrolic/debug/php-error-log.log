@@ -1,0 +1,2 @@
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELEC * FROM myguests' at line 1
+Table 'practice.myguest' doesn't exist

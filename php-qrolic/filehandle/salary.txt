@@ -1,0 +1,4 @@
+Employee: Rahul
+Salary: 50000
+Bonus: 5000
+Total Amt: 55000

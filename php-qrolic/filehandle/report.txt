@@ -1,0 +1,3 @@
+Total Students: 50
+Present: 45
+Absent: 5

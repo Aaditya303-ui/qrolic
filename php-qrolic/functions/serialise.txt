@@ -1,0 +1,1 @@
+a:3:{s:4:"host";s:9:"localhost";s:4:"user";s:4:"root";s:4:"port";i:3306;}
