@@ -109,5 +109,5 @@ function P(name){
 }
 
 const res = new P("Aaditya");
-// res._name = "Amee";
+// res._name = "Om";
 console.log(res.name);
