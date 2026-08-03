@@ -260,22 +260,26 @@ console.log(user1.getPass);
 
 // Question 15 - Real Interview Style
 
-function Car(brand,price){
+function Car(brand,price,foo = 100){
     this._brand = brand;
     this._price = price;
+    this._foo = foo;
 
     Object.defineProperty(this,"details",{
         get(){
-            return `${this._brand} - ₹${this._price}`;
+            return this;
         },
         set(value){
             [this._brand,this._price] =  value.split(" ");
 
             this._brand = brand;
             this._price = price;
+        },
+        foo(){
+            return this._foo;
         }
     });
 }
 
 as = new Car("Toyota",2500000);
-console.log(as.details);
+console.log(as.details._foo);
