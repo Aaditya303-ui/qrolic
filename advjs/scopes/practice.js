@@ -293,3 +293,22 @@
 // console.log(m.showEmployeeId());
 // m.increaseSalary(5000);
 // console.log(m.showSalary());
+
+// obj = {
+//     name: "rahul",
+//     age: 20,
+//     dom: "abc"
+// }
+
+// Object.defineProperty(obj,"name",{
+//     writable: true,
+//     enumerable: false
+// });
+
+// obj.name = "Oj";
+// o = Object.getOwnPropertyDescriptor(obj,"name");
+// console.log(o);
+
+// for(let key in obj){
+//     console.log(key);
+// }
