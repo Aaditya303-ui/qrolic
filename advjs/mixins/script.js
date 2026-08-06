@@ -1,56 +1,56 @@
-class Bird {
-    constructor(name){
-        this.name = name;
-    }
-}
+// class Bird {
+//     constructor(name){
+//         this.name = name;
+//     }
+// }
 
-const canFly = {
-    fly(){
-        console.log("flying....");
-    }
-}
+// const canFly = {
+//     fly(){
+//         console.log("flying....");
+//     }
+// }
 
-class bird1{}
-class Airplane{}
+// class bird1{}
+// class Airplane{}
 
-Object.assign(Bird.prototype,canFly);
+// Object.assign(Bird.prototype,canFly);
 
-const bird = new Bird("Parrot");
+// const bird = new Bird("Parrot");
 
-Object.assign(bird1.prototype,canFly);
-Object.assign(Airplane.prototype,canFly);
+// Object.assign(bird1.prototype,canFly);
+// Object.assign(Airplane.prototype,canFly);
 
-b1 = new bird1();
-airplane = new Airplane();
+// b1 = new bird1();
+// airplane = new Airplane();
 
 // bird.fly();
 // airplane.fly();
 // b1.fly();
 
-class scorecard{
-    constructor(name,runs){
-        this.name = name;
-        this.runs = 0;
-    }
-}
+// class scorecard{
+//     constructor(name,runs){
+//         this.name = name;
+//         this.runs = 0;
+//     }
+// }
 
-let runFest = {
-    six(){
-        this.runs = this.runs + 6;
-    },
+// let runFest = {
+//     six(){
+//         this.runs = this.runs + 6;
+//     },
 
-    four(){
-        this.runs = this.runs + 4;
-    },
+//     four(){
+//         this.runs = this.runs + 4;
+//     },
 
-    score(){
-        return this.runs;
-    }
-};
+//     score(){
+//         return this.runs;
+//     }
+// };
 
-Object.assign(scorecard.prototype,runFest);
+// Object.assign(scorecard.prototype,runFest);
 
-virat = new scorecard("Virat");
+// virat = new scorecard("Virat");
 // virat.six();
 // virat.six();
 // virat.four();
@@ -73,33 +73,68 @@ virat = new scorecard("Virat");
 // DoodleSpeak.speak();
 // DoodleSpeak.home();
 
-let employeeActions = {
-    showMessage(message){
-        console.log(message);
-    }
-};
+// let employeeActions = {
+//     showMessage(message){
+//         console.log(message);
+//     }
+// };
 
-class Employee {
-    constructor(name) {
-        this.name = name;
-    }
-}
+// class Employee {
+//     constructor(name) {
+//         this.name = name;
+//     }
+// }
 
-let employeeWork = {
-    __proto__: employeeActions,
+// let employeeWork = {
+//     __proto__: employeeActions,
 
-    start(){
-        super.showMessage(`${this.name} started working`);
-    },
+//     start(){
+//         super.showMessage(`${this.name} started working`);
+//     },
 
-    endwork(){
-        super.showMessage(`${this.name} finished working`);
-    }
-}
+//     endwork(){
+//         super.showMessage(`${this.name} finished working`);
+//     }
+// }
 
 // Object.assign(employeeActions.prototype,employeeWork);
-Object.assign(Employee.prototype,employeeWork);
+// Object.assign(Employee.prototype,employeeWork);
 
-const emp1 = new Employee("Aaditya Jadeja");
+// const emp1 = new Employee("Aaditya Jadeja");
 // emp1.start();
 // emp1.endwork();
+
+// class Employee{
+//     constructor(name){
+//         this.name = name;
+//         this.currentWork = "Idle";
+//     }
+
+//     showStatus(){
+        
+//     }
+// }
+
+class Employee{
+    constructor(name){
+        this.name = name;
+    }
+
+    show(){
+        console.log(this.name);
+    }
+}
+
+function CanCode(parent){
+    return class extends parent{
+        code(){
+            console.log(`${this.name} is coding`);
+        }
+    }
+}
+
+class developer extends CanCode(Employee){}
+
+const dev = new developer("Aaditya");
+dev.show();
+dev.code();
