@@ -1,3 +1,5 @@
+"use strict"
+
 // Question 1 - Inspect a Property
 
 // const player = {
@@ -140,14 +142,70 @@
 
 // Question 7 - Book Constructor
 
+// let employee = {
+//     company: "Google"
+// };
+
+// let developer = {
+//     role: "Frontend"
+// };
+
+// developer.__proto__ = employee;
+// console.log(developer.role);
+// console.log(developer.company);
+
 let employee = {
-    company: "Google"
-};
+    name: "Aaditya",
+    age: 23,
+    address:{
+        city: "rajkot"
+    }
+}
 
-let developer = {
-    role: "Frontend"
-};
 
-developer.__proto__ = employee;
-console.log(developer.role);
-console.log(developer.company);
+let {name} = employee
+console.log("nameEmp => " ,name);
+
+// let {
+//     name: test,
+//     address:{
+//         city: city1
+//     }
+// } = employee;
+
+// let arr = [12,23,34,45];
+
+// [a1,a2,...rest] = arr;
+
+// console.log(test);
+// console.log(city1);
+// console.log(a1);
+// console.log(a2);
+// console.log(rest);
+
+// console.log(employee.address1?.abc ?? "Default");
+
+function nums(arg){
+    return new Promise((resolve,reject)=>{
+        console.log("num ",arg);
+    })
+}
+
+console.log("start");
+
+let abc = new Promise((resolve,reject)=>{
+        resolve("resolved");
+        console.log("Promise 1");
+});
+
+setTimeout(function(){
+    console.log("i am setTimeOut");
+});
+
+async function run(){
+    await nums(12);
+}
+
+console.log(abc);
+run();
+console.log("end");
