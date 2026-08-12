@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <button id="btn">click</button>
+    <!-- <button id="btn">multiply</button> -->
+</body>
+<!-- <script type="module" src="./main.js"></script> -->
+ <script type="module">
+    let btn = document.getElementById("btn");
+    let result = document.getElementById("output");
+
+    btn.addEventListener("click",async function(){
+        let calc = await import('./math.js');
+        let output = calc.add(12,23);
+        result.innerHTML = output;
+    })
+ </script>
+</html>
