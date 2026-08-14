@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        img{
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <img id="imag" src="./Doom.png" alt="" class="class" title="title"
+    data-villian="doom">
+
+    <div id="home" data-author-name="stanlee" data-year="2019">
+        <h1>Hello i am content</h1>
+        <p>I am paragraph</p>
+    </div>
+    <button id="btn">show</button>
+    <button id="change">change</button>
+
+    <p id="para">paragraph element 1</p>
+    <p id="para">paragraph element 2</p>
+    <p id="changeme">paragraph element 3</p> <button id="md">change me</button>
+
+    <input id="inpdata" type="text" value="gambhir"><button id="hit">hit</button>
+    <button id="modify">modify</button>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#modify").click(function(){
+            $("p").html(function(index){
+                return `Index of the paragraph is: ${index}`;
+            });
+        });
+
+        $("#md").click(function(){
+            $("#changeme").text("I am doom");
+        });
+
+        $("#hit").click(function(){
+            $("#inpdata").val("virat Kohli");
+        })
+    })
+</script>
+</html>
