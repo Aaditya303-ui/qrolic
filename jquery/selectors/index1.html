@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <!-- <p>I am para 1</p>
+    <p>I am para 2</p>
+    <p>I am para 3</p>
+    <button class="btn">hide</button> -->
+
+    <!-- <ul>
+      <li>first in list</li>
+      <li>Second in list</li>
+      <li>Third in list</li>
+    </ul>
+    <p>
+      <a href="https://www.w3schools.com/html/" target="_blank"
+        >HTML Tutorial</a
+      >
+    </p>
+    <p><a href="https://www.w3schools.com/css/">CSS Tutorial</a></p>
+    <button class="btn">hide</button> -->
+
+    <!-- Manipulation of table elements -->
+    <!-- <table>
+        <tr>
+            <th>Company</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>abc</td>
+            <td>Austrlia</td>
+        </tr>
+        <tr>
+            <td>xyz</td>
+            <td>New Zealand</td>
+        </tr>
+         <tr>
+            <td>qwerty</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>qwerty</td>
+            <td></td>
+        </tr>
+     </table> -->
+
+    <!-- <h3><p>Hello i am Doom from latveria</p></h3>
+    <button id="show">show</button>
+    <button id="hidden">hide</button>
+    <button id="style">style</button> -->
+
+    Name: <input type="text" required /><br />
+    password: <input type="password" /><br />
+    checkbox: <input type="checkbox" value="bike" name="bike" /><br />
+    radio: <input type="radio" value="radios" /> select:
+    <select>
+      <option value="">Volvo</option>
+      <option selected="selected">Saab</option>
+      <option>Mercedes</option>
+    </select>
+
+    <!-- <a href="https://google.com">Google</a>
+    <a href="http://example.com">Example</a>
+    <a href="mailto:test@gmail.com">Mail</a> -->
+    <br />
+    <!-- <a href="resume.pdf">Resume</a>
+    <a href="photo.jpg">Photo</a>
+    <a href="notes.pdf">Notes</a> -->
+
+    <br />
+    <img src="avengers.jpg" />
+    <img src="doom.jpg" />
+    <img src="doctor-doom.png" />
+    <br />
+    <p class="red">Para 1</p>
+    <p>Para 2</p>
+    <p class="red">Para 3</p>
+    <p>Para 4</p>
+  </body>
+  <script src="./script.js"></script>
+  <script>
+    $("input[type='text']").css("border", "2px solid red");
+    $("input[type!='password']").css("background-color", "yellow");
+    $("a[href^='https']").css("color", "red");
+    $("a[href$='.pdf']").css("background", "yellow");
+    $("img[src*='doom']").css("border", "2px solid red");
+    $("[required]").css("background", "aqua");
+    $("p:not(.red)").css("color","blue");
+  </script>
+</html>
