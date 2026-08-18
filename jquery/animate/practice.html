@@ -65,11 +65,23 @@
 
     <!-- <button id="move">move</button> -->
      <!-- <button id="mov">move</button> -->
-    <div id="red" style="height: 100px; width:100px; display:none; background-color:red"></div>
+    <!-- <div id="red" style="height: 100px; width:100px; display:none; background-color:red"></div>
     <div id="yellow" style="height: 100px; width:100px; display:none; background-color:yellow"></div>
-    <div id="green" style="height: 100px; width:100px; display:none; background-color:green"></div>
+    <div id="green" style="height: 100px; width:100px; display:none; background-color:green"></div> -->
+
+    <!-- <div id="content">
+            <p>I am paragraph 1</p>
+            <p>I am paragraph 2</p>
+            <p>I am paragraph 3</p>
+    </div> -->
 </body>
 <script>
-    
+    $(document).ready(function(){
+        $("#content").on("click","p",function(e){
+            //alert($(this).text());
+            //console.log(e.target);
+            //alert(e.target);
+        })
+    })
 </script>
 </html>
