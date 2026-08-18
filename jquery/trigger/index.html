@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <button>click me</button>
+    <a id="autoclick" href="#">work in progress</a>
+
+    <input type="text" id="username" />
+    <button id="focusInput">focus</button>
+    <div id="content">
+        <p>I am para 1</p>
+        <p>I am para 2</p>
+        <p>I am para 3</p>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function(){
+        $("#content").on("click","p",function(){
+            $(this).css("background-color","red");
+        })
+    })
+  </script>
+</html>

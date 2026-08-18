@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="div1"
+      style="width: 90px; height: 90px; display: none; background-color: black"
+    ></div>
+    <br />
+    <div
+      id="div2"
+      style="width: 90px; height: 90px; display: none; background-color: green"
+    ></div>
+    <br />
+    <div
+      id="div3"
+      style="width: 90px; height: 90px; display: none; background-color: blue"
+    ></div>
+    <br />
+    <div
+      id="div4"
+      style="width: 90px; height: 90px; display: none; background-color: red"
+    ></div>
+    <br />
+    <div
+      id="div5"
+      style="width: 90px; height: 90px; display: none; background-color: purple"
+    ></div>
+    <br />
+    <button>click</button>
+  </body>
+  <script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            $("#div1").delay("slow").fadeIn();
+            $("#div2").delay("fast").fadeIn();
+            $("#div3").delay(2000).fadeIn();
+            $("#div4").slideUp( 300 ).delay( 800 ).fadeIn( 400 );;
+        })
+    })
+  </script>
+</html>

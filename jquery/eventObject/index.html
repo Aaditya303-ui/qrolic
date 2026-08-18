@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="log"></div>
+    <div>
+      <p>
+        <strong><span>click</span></strong>
+      </p>
+    </div>
+    <button id="mybtn">click</button>
+
+    <!-- <center>
+          <h1 id="geeks1" style="color:green;">
+            GeeksForGeeks
+        </h1>
+        <h2 id="geeks2">
+            jQuery event.currentTarget Property
+        </h2>
+        <p>
+            <b>Note:</b> 
+            Click on each HTML element.
+        </p>
+    </center> -->
+    <div id="linkContainer">
+      <p>
+        <a href="https://google.com" class="prevent-link">Google (Blocked)</a>
+      </p>
+      <p>
+        <a href="https://wikipedia.org" class="prevent-link"
+          >Wikipedia (Blocked)</a
+        >
+      </p>
+      <p><a href="https://jquery.com">jQuery (Allowed)</a></p>
+    </div>
+
+    <button id="addLink">Add Blocked Link</button>
+
+    <div id="log" style="margin-top: 20px; font-weight: bold"></div>
+  </body>
+  <script>
+    $(document).ready(function(){
+        $("#linkContainer").on("click",".prevent-link",function(e){
+            e.preventDefault();
+            alert(e.target);
+        })
+    })
+  </script>
+</html>

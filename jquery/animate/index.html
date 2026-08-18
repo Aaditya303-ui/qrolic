@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div
+      id="woke"
+      style="
+        background: #98bf21;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+      "
+    ></div>
+    \ <br /><br /><br /><br /><br /><br />
+    <button id="click">click</button>
+    <br /><br />
+    <div id="work" style="height: 100px; width: 100px; background: red">content</div>
+    <button id="vd">click</button>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("#click").click(function () {
+        $("#woke").animate(
+          {
+            left: "200px",
+            opacity: "0.5s",
+            height: "200px",
+            width: "200px",
+            height: "+=150px",
+            width: "+=150px",
+          },
+          "fast",
+        );
+      });
+
+      $("#vd").click(function () {
+        $("#work").animate({ height: "200px", opacity: "0.4" }, "slow");
+        $("#work").animate({ width: "200px", opacity: "0.8" }, "slow");
+        $("#work").animate({ height: "200px", opacity: "0.4" }, "slow");
+        $("#work").animate({ width: "200px", opacity: "0.8", fontSize: '3em' }, "slow");
+      });
+    });
+  </script>
+</html>
