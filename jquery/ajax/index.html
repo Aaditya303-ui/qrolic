@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <h1>JQuery Ajax</h1>
+
+    <h3 id="h11"></h3>
+    <div id="content"></div>
+    <button>click</button>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $.ajax({
+          url: "https://jsonplaceholder.typicode.com/todos/3",
+          method: "GET",
+          dataType: "json",
+          success: function (data) {
+            $("#content").text(data.title);
+          },
+          error: function (error) {
+            console.error("Error:", error);
+          },
+        });
+      });
+    });
+  </script>
+</html>

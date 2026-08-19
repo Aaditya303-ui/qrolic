@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 1. Load a text file -->
+    <!-- <h2 id="message"></h2>
+    <button id="loadbtn">fetch</button> -->
+
+    <!-- 2. Handle a failed request -->
+    <!-- <div id="result"></div>
+    <button id="loadBtn">Load Profile</button> -->
+
+    <!-- 3. Use .load() instead -->
+    <!-- <div id="news"></div>
+    <button id="loadNews">Load News</button> -->
+
+    <!-- 4. Use .load() with a callback -->
+    <!-- <div id="content"></div>
+    <button id="loadBtn">Load Content</button> -->
+
+    <!-- 5. Search a user using GET -->
+    <!-- <input type="text" id="username" />
+    <button id="searchBtn">Search</button>
+    <div id="result"></div> -->
+
+    <!-- 6. Login form using POST -->
+    <!-- <input type="text" id="email" />
+    <input type="password" id="password" />
+    <button id="login">Login</button>
+    <div id="result"></div> -->
+
+    <!-- 7. Update a user's profile -->
+    <!-- <input type="text" id="name">
+    <input type="text" id="age">
+    <button id="update">update profile</button> -->
+    <!-- <div id="result"></div> -->
+
+    <!-- <input type="text" id="name" />
+    <button id="send">Send Name</button>
+    <h2 id="result"></h2> -->
+
+    <!-- 9. Display a JSON object -->
+    <!-- <div id="user"></div>
+    <button id="loaduser">load users</button> -->
+
+    <!-- 12. Display products as HTML -->
+    <!-- <div id="products"></div> -->
+
+    <!-- Get product information from PHP -->
+    <!-- <input type="number" id="proId" /> -->
+    <!-- <input type="text" id="name" />
+    <button id="getUser">Get User</button> -->
+
+    <!-- <div id="result"></div> -->
+
+    <!-- 16. User search with loading indicator -->
+    <!-- <input type="text" id="username" />
+    <button id="search">Search</button>
+
+    <div id="loading">Loading...</div>
+    <div id="result"></div> -->
+
+    <button id="loadProducts">Load Products</button>
+
+    <div id="loading">Please wait...</div>
+
+    <div id="products"></div>
+
+    <div id="error"></div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("#loading").hide();
+      $("#loadProducts").click(function () {
+        $.ajax({
+          url: "products.json",
+          method: "GET",
+          dataType: 'json',
+          beforeSend: function(){
+            $("#loading").show();
+            console.log("loading your content");
+          },
+          success: function(products){
+            $.each(products, function(index, product){
+              $('#products').append("Name: "+product.name+" Prices: "+product.price+" <br>");
+            })
+          },
+          error: function(error){
+            $('#error').html("error..."+error);
+            console.log(error);
+          },
+          complete: function(){
+            $("#loading").hide();
+            console.log("completed...")
+          }
+        })
+      });
+    });
+  </script>
+</html>
