@@ -139,7 +139,7 @@
 //       function (data) {
 //         $("#content").html(data.message + "<br>" + data.age);
 //       },
-//       "json",
+//      \
 //     );
 //   });
 // });
