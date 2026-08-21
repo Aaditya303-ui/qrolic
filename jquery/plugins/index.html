@@ -1,24 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-</head>
-<body>
-    <p>I am paragraph</p>
-    <div id="box">
-        box
-    </div>
-</body>
-<script src="./script.js"></script>
-<script>
-    $.fn.greenify = function(){
-        this.css("color","green");
-        return this;
-    }
-
-    $("a").greenify().addClass("greeni")
-</script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/3.0.2/css/dataTables.dataTables.min.css"
+    />
+    <script src="https://cdn.datatables.net/3.0.2/js/dataTables.min.js"></script>
+  </head>
+  <body>
+    <table id="myTable" border="1">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Skills</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2</td>
+          <td>Sita</td>
+          <td>Php</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Kl Rahul</td>
+          <td>Pbks</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Virat Kohli</td>
+          <td>RCB</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <script>
+    $(document).ready(function(){
+        $("#myTable").DataTable();
+    })
+  </script>
 </html>

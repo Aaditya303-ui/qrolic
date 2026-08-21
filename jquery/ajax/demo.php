@@ -29,10 +29,10 @@
 // $name = $_POST['name'];
 
 // echo "Hello $name";
-$id = $_GET['id'];
+// $id = $_GET['id'];
 
-echo json_encode([
-    "id" => $id,
-    "name" => "Laptop",
-    "price" => 55000
-]);
+// echo json_encode([
+//     "id" => $id,
+//     "name" => "Laptop",
+//     "price" => 55000
+// ]);
