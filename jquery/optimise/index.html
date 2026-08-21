@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <!-- <p id="para">I am a paragraph</p>
+    <button id="btn">click me</button> -->
+
+    <!-- <ul id="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul> -->
+    <p>This is the first paragraph !</p>
+    <p id="para2">This is the second paragraph !</p>
+    <button class="dt">detach</button>
+    <button class="ad">add</button>
+    <button class="rm">remove</button>
+  </body>
+  <script>
+    //$(document).ready(function () {
+    //$.fn.effectify = function () {
+    //  this.css("color", "#fb7c7c").fadeOut(2000).fadeIn(2000);
+    //};
+    //$("#btn").click(function () {
+    //  $("#para").effectify();
+    //});
+
+    //$("#menu")
+    //  .addClass("active")
+    //  .css("background", "black")
+    //  .find("li")
+    //  .css("color", "white");
+    //});
+
+    //$(document).ready(function(){
+    //    $('button').click(function(){
+    //        $('p').detach();
+    //    })
+    //})
+
+    $(document).ready(function () {
+      let para2 = $("#para2");
+
+      para2.click(function () {
+        console.log("PARAGRAPH CLICKED");
+      });
+      
+      $(".rm").click(function () {
+        para2.remove();
+        console.log(para2.html());
+      });
+
+      $(".dt").click(function () {
+        para2.detach();
+        console.log(para2.html());
+      });
+
+      $(".ad").click(function () {
+        $("body").append(para2);
+        console.log($("#para2").html());
+      });
+      //console.log($("#para2").html());
+    });
+  </script>
+</html>
