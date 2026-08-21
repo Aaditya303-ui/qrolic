@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <style>
+    .greenified {
+      font-weight: bold;
+      font-size: 25px;
+    }
+  </style>
+  <body>
+    <a href="#">Google</a>
+    <br />
+
+    <a href="#">YouTube</a>
+    <br />
+
+    <a href="#">Facebook</a>
+    <br /><br />
+
+    <button id="greenBtn">Make Links Green</button>
+  </body>
+  <script>
+    $(document).ready(function () {
+      //$("a").css("color","red");
+
+      //$.fn.greenify = function () {
+      //  $("a").css("color", "green");
+      //};
+
+      $.fn.greenify = function(){
+        this.css("color","green");
+        return this;
+      }
+
+      // chaining
+
+      $("#greenBtn").click(function () {
+        $("a").greenify().addClass("greenified");
+      });
+    });
+  </script>
+</html>
